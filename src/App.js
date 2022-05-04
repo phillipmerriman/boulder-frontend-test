@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 import './App.css';
@@ -5,6 +6,8 @@ import data from './workout-data.json';
 
 function App() {
 
+  const [twentyMinute, setTwentyMinute] = useState(0)
+  const [oneMinute, setOneMinute] = useState(0)
   // const mockData = [
   //   {
   //     name: 'Page A',
@@ -56,10 +59,31 @@ function App() {
       power: item.values.power
     }
   });
+  
+  // write algorithm using realData, not workout-data.json
+
+  const translateMinutesToMs = (minutes) => {
+    return minutes * 60000;
+  };
+
+  const calculatePower = (minutes) => {
+    const offset = translateMinutesToMs(minutes);
+    console.log('translated', offset);
+  };
+
+  useEffect(() => {
+    calculatePower(20);
+  });
 
   return (
     <div className="App">
       <header className="App-header">
+        <div className="average" >
+          Best 20 Minute Power Effort: {twentyMinute}
+        </div>
+        <div className="average" >
+          Best 1 Minute Power Effort: {oneMinute}
+        </div>
         <ResponsiveContainer width="100%" aspect={3}>
           <LineChart
             width={500}
@@ -72,7 +96,7 @@ function App() {
               bottom: 5,
             }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid />
             <XAxis dataKey="millisecondOffset" />
             <YAxis />
             <Tooltip />
