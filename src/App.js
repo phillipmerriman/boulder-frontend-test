@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   LineChart,
   Line,
@@ -14,9 +13,6 @@ import "./App.css";
 import data from "./workout-data.json";
 
 function App() {
-  // const [twentyMinute, setTwentyMinute] = useState(0);
-  // const [oneMinute, setOneMinute] = useState(0);
-
   const msAndPower = data.samples.map((item) => {
     return {
       millisecondOffset: item.millisecondOffset,
@@ -43,7 +39,9 @@ function App() {
     };
     tempSum = maxSum;
     for (let i = seconds; i < power.length; i++) {
-      if (typeof power[i] !== 'number') i++;
+      if (typeof power[i] !== 'number') {
+        continue;
+      };
       tempSum = tempSum - power[i - seconds] + power[i];
       if (tempSum > maxSum) {
         maxSum = tempSum;
@@ -52,26 +50,18 @@ function App() {
     return maxSum / seconds;
   };
 
-
   const twentyMinute = calculatePower(power, 1200);
   const oneMinute = calculatePower(power, 60);
-
-  // useEffect(() => {
-  //   console.log("msAndPower", msAndPower);
-  //   console.log("power", power);
-  //   console.log('calculatePower', calculatePower(power, 1200));
-  //   calculatePower(20);
-  // });
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="average">
+        <h2 >
           Best 20 Minute Power Effort: {twentyMinute}
-        </div>
-        <div className="average">
+        </h2>
+        <h2 >
           Best 1 Minute Power Effort: {oneMinute}
-        </div>
+        </h2>
         <ResponsiveContainer width="100%" aspect={3}>
           <LineChart
             width={500}
@@ -97,6 +87,9 @@ function App() {
             />
           </LineChart>
         </ResponsiveContainer>
+        <h3>
+            X-Axis: Milliseconds | Y-Axis: Power Output
+        </h3>
       </header>
     </div>
   );
