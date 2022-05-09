@@ -6,7 +6,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -33,7 +32,6 @@ const PowerOutputChart = (props) => {
           <XAxis dataKey="millisecondOffset" />
           <YAxis />
           <Tooltip />
-          <Legend />
           <Line
             type="monotone"
             dataKey="power"
