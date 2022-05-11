@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BestPowerEffort from '../BestPowerEffort';
 import { render, cleanup, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+
+import BestPowerEffort from '../BestPowerEffort';
 
 describe('BestPowerEffort component', () => {
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GraphTip from '../GraphTip';
 import { render, cleanup, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
+
+import GraphTip from '../GraphTip';
 
 describe('GraphTip component', () => {
 
