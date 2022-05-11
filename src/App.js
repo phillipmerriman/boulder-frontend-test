@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { calculatePower } from './Utils/calculatePower';
-import BestPowerEffort from "./Components/BestPowerEffort/BestPowerEffort";
+import BestPowerEffort from './Components/BestPowerEffort/BestPowerEffort';
 import PowerOutputChart from './Components/PowerOutputChart/PowerOutputChart';
-import "./App.css";
-import data from "./workout-data.json";
+import './App.css';
+import data from './workout-data.json';
 
 function App() {
   const msAndPower = data.samples.map((item) => {
@@ -20,8 +20,8 @@ function App() {
   const oneMinute = calculatePower(power, 60);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <BestPowerEffort twentyMinute={twentyMinute} oneMinute={oneMinute} />
         <PowerOutputChart msAndPower={msAndPower} />
       </header>

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PowerOutputChart component matches snapshot 1`] = `
+<div
+  data-testid="powerOutputChart"
+>
+  <div
+    className="recharts-responsive-container"
+    style={
+      Object {
+        "height": 700,
+        "maxHeight": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "width": 1700,
+      }
+    }
+  />
+  <h3
+    data-testid="axisInfo"
+  >
+    X-Axis: Milliseconds | Y-Axis: Power Output
+  </h3>
+</div>
+`;

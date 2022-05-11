@@ -15,8 +15,11 @@ const PowerOutputChart = (props) => {
   const { msAndPower } = props;
 
   return (
-    <>
-      <ResponsiveContainer width="100%" aspect={3}>
+    <div data-testid='powerOutputChart' >
+      <ResponsiveContainer 
+        width={1700}
+        height={700}
+      >
         <LineChart
           width={500}
           height={300}
@@ -41,7 +44,7 @@ const PowerOutputChart = (props) => {
         </LineChart>
       </ResponsiveContainer>
       <GraphTip />
-    </>
+    </div>
   );
 };
 

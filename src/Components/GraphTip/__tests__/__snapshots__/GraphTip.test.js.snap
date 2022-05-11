@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphTip component matches snapshot 1`] = `
+<h3
+  data-testid="axisInfo"
+>
+  X-Axis: Milliseconds | Y-Axis: Power Output
+</h3>
+`;
