@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -6,10 +6,11 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-} from "recharts";
+} from 'recharts';
 
-import GraphTip from "../GraphTip/GraphTip";
+import GraphTip from '../GraphTip/GraphTip';
 
+// component to render graph with data
 const PowerOutputChart = (props) => {
   const { msAndPower } = props;
 
@@ -27,13 +28,13 @@ const PowerOutputChart = (props) => {
         }}
       >
         <CartesianGrid />
-        <XAxis dataKey="millisecondOffset" />
+        <XAxis dataKey='millisecondOffset' />
         <YAxis />
         <Tooltip />
         <Line
-          type="monotone"
-          dataKey="power"
-          stroke="#8884d8"
+          type='monotone'
+          dataKey='power'
+          stroke='#8884d8'
           activeDot={{ r: 8 }}
         />
       </LineChart>

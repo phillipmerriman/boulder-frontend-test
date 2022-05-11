@@ -1,5 +1,6 @@
 import React from 'react';
 
+// component to render best one minute and twenty minute power effort
 const BestPowerEffort = (props) => {
   const { twentyMinute, oneMinute } = props;
 

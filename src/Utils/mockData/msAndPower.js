@@ -1,3 +1,5 @@
+// mockData to use for testing purposes
+
 const mockData = [
     {
         millisecondOffset: 1000,
