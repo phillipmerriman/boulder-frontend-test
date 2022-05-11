@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <h2
+    data-testid="bestOneMinute"
+  >
+    Best 1 Minute Power Effort: 
+    300
+  </h2>,
+  <h2
+    data-testid="bestTwentyMinute"
+  >
+    Best 20 Minute Power Effort: 
+    200
+  </h2>,
+]
+`;
