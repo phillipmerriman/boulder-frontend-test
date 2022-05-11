@@ -12,7 +12,7 @@ describe('PowerOutputChart component', () => {
     
     it('renders without crashing', () => {
         const div = document.createElement("div");
-        ReactDOM.render(<PowerOutputChart></PowerOutputChart>, div);
+        ReactDOM.render(<PowerOutputChart />, div);
     });
     
     it('matches snapshot', () => {

@@ -6,7 +6,7 @@ export const calculatePower = (power, seconds) => {
   }
   tempSum = maxSum;
   for (let i = seconds; i < power.length; i++) {
-    if (typeof power[i] !== "number") {
+    if (typeof power[i] !== 'number') {
       continue;
     }
     tempSum = tempSum - power[i - seconds] + power[i];

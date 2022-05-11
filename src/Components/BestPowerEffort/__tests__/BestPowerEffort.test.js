@@ -11,16 +11,16 @@ describe('BestPowerEffort component', () => {
     
     it('renders without crashing', () => {
         const div = document.createElement("div");
-        ReactDOM.render(<BestPowerEffort></BestPowerEffort>, div);
+        ReactDOM.render(<BestPowerEffort />, div);
     });
     
     it('renders best 1 minute power effort correctly', () => {
-        render(<BestPowerEffort oneMinute={300}></BestPowerEffort>);
+        render(<BestPowerEffort oneMinute={300} />);
         expect(screen.getByTestId('bestOneMinute')).toHaveTextContent(300);
     });
     
     it('renders best 20 minute power effort correctly', () => {
-        render(<BestPowerEffort twentyMinute={200}></BestPowerEffort>);
+        render(<BestPowerEffort twentyMinute={200} />);
         expect(screen.getByTestId('bestTwentyMinute')).toHaveTextContent(200);
     });
     

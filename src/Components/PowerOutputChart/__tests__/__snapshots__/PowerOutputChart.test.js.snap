@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PowerOutputChart component matches snapshot 1`] = `
-Array [
+<div
+  data-testid="powerOutputChart"
+>
   <div
     className="recharts-responsive-container"
     style={
@@ -13,11 +15,11 @@ Array [
         "width": "100%",
       }
     }
-  />,
+  />
   <h3
     data-testid="axisInfo"
   >
     X-Axis: Milliseconds | Y-Axis: Power Output
-  </h3>,
-]
+  </h3>
+</div>
 `;

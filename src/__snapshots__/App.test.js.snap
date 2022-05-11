@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parent component - App.js matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h2
+      data-testid="bestOneMinute"
+    >
+      Best 1 Minute Power Effort: 
+      376.31666666666666
+    </h2>
+    <h2
+      data-testid="bestTwentyMinute"
+    >
+      Best 20 Minute Power Effort: 
+      231.95666666666668
+    </h2>
+    <div
+      data-testid="powerOutputChart"
+    >
+      <div
+        className="recharts-responsive-container"
+        style={
+          Object {
+            "height": "100%",
+            "maxHeight": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
+            "width": "100%",
+          }
+        }
+      />
+      <h3
+        data-testid="axisInfo"
+      >
+        X-Axis: Milliseconds | Y-Axis: Power Output
+      </h3>
+    </div>
+  </header>
+</div>
+`;

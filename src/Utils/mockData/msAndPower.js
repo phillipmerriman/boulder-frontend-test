@@ -21,11 +21,11 @@ const mockData = [
     },
     {
         millisecondOffset: 6000,
-        power: 400
+        power: 420
     },
     {
         millisecondOffset: 7000,
-        power: 300
+        power: 360
     },
     {
         millisecondOffset: 8000,
@@ -40,9 +40,5 @@ const mockData = [
         power: 200
     },
 ];
-
-// export default {
-//     get: jest.fn().mockResolvedValue(mockData)
-// };
 
 export default mockData;

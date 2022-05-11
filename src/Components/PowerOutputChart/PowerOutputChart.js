@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -7,16 +7,16 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from "recharts";
+} from 'recharts';
 
-import GraphTip from "../GraphTip/GraphTip";
+import GraphTip from '../GraphTip/GraphTip';
 
 const PowerOutputChart = (props) => {
   const { msAndPower } = props;
 
   return (
-    <>
-      <ResponsiveContainer width="100%" aspect={3}>
+    <div data-testid='powerOutputChart' >
+      <ResponsiveContainer width='100%' aspect={3}>
         <LineChart
           width={500}
           height={300}
@@ -29,19 +29,19 @@ const PowerOutputChart = (props) => {
           }}
         >
           <CartesianGrid />
-          <XAxis dataKey="millisecondOffset" />
+          <XAxis dataKey='millisecondOffset' />
           <YAxis />
           <Tooltip />
           <Line
-            type="monotone"
-            dataKey="power"
-            stroke="#8884d8"
+            type='monotone'
+            dataKey='power'
+            stroke='#8884d8'
             activeDot={{ r: 8 }}
           />
         </LineChart>
       </ResponsiveContainer>
       <GraphTip />
-    </>
+    </div>
   );
 };
 
